@@ -3,3 +3,8 @@
 .font-railway {
     font-family: "Raleway", sans-serif;
 }
+
+.vl {
+    border-left: 3px dotted white;
+   
+  }
