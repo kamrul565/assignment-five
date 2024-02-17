@@ -4,7 +4,10 @@
     font-family: "Raleway", sans-serif;
 }
 
-.vl {
-    border-left: 3px dotted white;
+hr {
+    border: 1px dashed #03071233;
    
-  }
+}
+
+
+  
