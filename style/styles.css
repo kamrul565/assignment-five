@@ -3,7 +3,9 @@
 .font-railway {
     font-family: "Raleway", sans-serif;
 }
-
+.font-inter {
+    font-family: "Inter", sans-serif;
+}
 hr {
     border: 1px dashed #03071233;
    
