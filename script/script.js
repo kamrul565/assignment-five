@@ -7,7 +7,9 @@ const seats = document.querySelectorAll('#seats');
 let p = document.getElementById('phoneNo');
 let e = document.getElementById('email-id');
 let u = document.getElementById('UserName');
+let c = document.getElementById('cuppon-offer');
 
+c.value = '';
 u.value = '';
 e.value = '';
 p.value = '';
@@ -16,6 +18,15 @@ p.value = '';
 for (let seat of seats) {
 
     seat.addEventListener('click', function (e) {
+
+        let tar = e.target;
+
+        // if(tar.style.backgroundColor == '#1DD100') {
+        //     console.log("yes");
+        // }
+        e.target.disabled = true;
+
+        
 
         booked += 1;
 
@@ -37,7 +48,7 @@ for (let seat of seats) {
         
 
         //background change
-        let tar = e.target;
+        
         tar.style.backgroundColor = '#1DD100';
         tar.style.color = 'white';
 
@@ -60,20 +71,21 @@ for (let seat of seats) {
 document.getElementById('apply').addEventListener('click', function(e) {
     const cupponOffer = document.getElementById('cuppon-offer');
     let val  = cupponOffer.value;
+    offer = val;
 
-    let arr = val.split(' ');
+    // let arr = val.split(' ');
 
 
-    let offer = arr[0];
-    offer = offer.toLowerCase();
-    if(arr.length == 2) offer += arr[1];
+    // let offer = arr[0];
+    // offer = offer.toLowerCase();
+    // if(arr.length == 2) offer += arr[1];
 
-    if(offer == 'new15') {
+    if(offer == 'NEW15') {
         let discount = costs - (costs * 0.15);
         setValue('grand-total', discount);
         hidden('cupon-div');
     }
-    else if(offer == 'couple20') {
+    else if(offer == 'Couple 20') {
         let discount = costs - (costs * 0.2);
         setValue('grand-total', discount);
         hidden('cupon-div');
@@ -99,13 +111,12 @@ document.getElementById('phoneNo').addEventListener('keyup', function(e) {
         nextBtn.disabled = true;
     }
 
-    
+
 })
 
 
 document.getElementById('form-submit').addEventListener('submit', function(e) {
-   // p.target.value = '';
-    //console.log(p.value);
+
     e.preventDefault();
 })
 

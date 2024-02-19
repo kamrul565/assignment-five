@@ -110,39 +110,6 @@
     <main>
         <section>
             <!-- cuppon part -->
-            <!-- <div class="max-w-[1170px] min-h-[200px]  mx-auto mt-16">
-                <h1 class="text-4xl font-bold text-center">Best offers for you</h1>
-                <div class="flex justify-between mt-10 relative">
-                    <div class="w-[50px] h-[50px] bg-white rounded-full absolute left-[300px] -top-6"></div>
-                    <div class="bg-[#FFBF0F] flex py-8 justify-around w-[49%] h-[220px] rounded-2xl">
-                        <div class="flex flex-col justify-center space-y-2">
-                            <p class="text-4xl font-bold">15% OFF</p>
-                            <p class="text-xl font-semibold">on your next purchase</p>
-                            <p class="text-lg text-[#03071280]">use by January 2024</p>
-                        </div>
-                        <div class="vl"></div>
-                        <div class="flex flex-col justify-center space-y-2">
-                            <p class="text-3xl font-bold">NEW15</p>
-                            <p class="text-xl text-[#03071280]">Coupon Code</p>
-                        </div>
-                    </div>
-                    <div class="w-[50px] h-[50px] bg-white rounded-full absolute left-[300px] -bottom-6"></div>
-                    <div class="bg-[#F78C9C] flex py-8 justify-around w-[49%] h-[220px] rounded-2xl">
-                        <div class="flex flex-col justify-center space-y-2">
-                            <p class="text-4xl font-bold">15% OFF</p>
-                            <p class="text-xl font-semibold">on your next purchase</p>
-                            <p class="text-lg text-[#03071280]">use by January 2024</p>
-                        </div>
-                        <div class="vl"></div>
-                        <div class="flex flex-col justify-center space-y-2">
-                            <p class="text-3xl font-bold">NEW15</p>
-                            <p class="text-xl text-[#03071280]">Coupon Code</p>
-                        </div>
-                        <div class="w-[50px] h-[50px] bg-white rounded-full absolute right-[220px] -top-6"></div>
-                        <div class="w-[50px] h-[50px] bg-white rounded-full absolute right-[220px] -bottom-6"></div>
-                    </div>
-                </div>
-            </div> -->
 
 
             <div class="max-w-[1170px] min-h-[200px]  mx-auto mt-16">
@@ -431,7 +398,7 @@
                             <label for="" class="font-semibold">Passenger Name*</label>
                             <input type="text" placeholder="Enter your name" class="p-4 rounded-lg border-2" required id="UserName">
                             <label for="" class="font-semibold">Phone Number*</label>
-                            <input type="tel" name="" id="phoneNo" placeholder="Enter your phone number"
+                            <input type="number" name="" id="phoneNo" placeholder="Enter your phone number"
                                 class="p-4 rounded-lg border-2" required >
                             <label for="" class="font-semibold">Email ID</label>
                             <input type="email" name="" id="email-id" placeholder="Enter your email id"
@@ -440,9 +407,13 @@
                             <button class="btn bg-[#1DD100] border-none text-white font-bold text-xl mt-4 w-full" type="submit"
                                 onclick="my_modal_2.showModal()" id="next-btn">Next</button>
                             <dialog id="my_modal_2" class="modal ">
-                                <div class="modal-box">
-                                    <h3 class="font-bold text-lg">Hello!</h3>
-                                    <p class="py-4">Press ESC key or click outside to close</p>
+                                <div class="modal-box flex flex-col justify-center items-center gap-5">
+                                    <img src="./images/success.png" alt="">
+                                    <h3 class="font-bold text-lg text-[#27AE60] text-2xl font-bold">SUCCESS</h3>
+                                    <p class="py-4 text-center text-[#4A4A4A] text-xl font-medium">Thank you for Booking Our Bus Seats. 
+                                        We are working hard to find the best service and deals for you.</p>
+                                    <p class="text-xl">Shortly you will find a confirmation in your email.</p>   
+                                    <button class="btn text-xl font-semibold bg-[#27AE60] text-white rounded-full border-none px-10">Continue</button> 
                                 </div>
                                 <form method="dialog" class="modal-backdrop">
                                     <button>close</button>
@@ -451,18 +422,7 @@
 
                         </form>
 
-                        <!-- modal -->
-                        <!-- <button class="btn bg-[#1DD100] border-none text-white font-bold text-xl mt-4 w-full"
-                            onclick="my_modal_2.showModal()">Next</button> -->
-                        <!-- <dialog id="my_modal_2" class="modal ">
-                            <div class="modal-box">
-                                <h3 class="font-bold text-lg">Hello!</h3>
-                                <p class="py-4">Press ESC key or click outside to close</p>
-                            </div>
-                            <form method="dialog" class="modal-backdrop">
-                                <button>close</button>
-                            </form>
-                        </dialog> -->
+        
 
                         <div class="mt-4 flex justify-around text-[#03071280]">
                             <a href="" class="link">Terms and Conditions</a>
@@ -510,8 +470,7 @@
 
     <!-- Open the modal using ID.showModal() method -->
 
-    <input type="text" id="User">
-    <button class="btn">click</button>
+    
 
 
     <script src="script/script.js"></script>
