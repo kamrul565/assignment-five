@@ -167,6 +167,10 @@ function addSeats(seatNo) {
     document.getElementById('selected-seat-list').appendChild(seat);
 }
 
+document.getElementById('continue').addEventListener('click', function(e) {
+    location.reload();
+})
+
 
 
 
