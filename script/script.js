@@ -21,9 +21,7 @@ for (let seat of seats) {
 
         let tar = e.target;
 
-        // if(tar.style.backgroundColor == '#1DD100') {
-        //     console.log("yes");
-        // }
+        
         e.target.disabled = true;
 
         
@@ -43,6 +41,14 @@ for (let seat of seats) {
         else {
             let apply = document.getElementById('apply');
             apply.disabled = true;
+        }
+
+        const phoneNum = document.getElementById('phoneNo');
+        if(phoneNum.value != '' && booked > 0) {
+            nextBtn.disabled = false;
+        }
+        else {
+            nextBtn.disabled = true;
         }
 
         
@@ -93,6 +99,8 @@ document.getElementById('apply').addEventListener('click', function(e) {
     else {
         alert('Please enter valid Cupon!!');
     }
+
+   
     
     //console.log(offer);
 
