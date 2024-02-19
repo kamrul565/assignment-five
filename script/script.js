@@ -22,7 +22,7 @@ for (let seat of seats) {
         let tar = e.target;
 
         
-        e.target.disabled = true;
+        
 
         
 
@@ -50,6 +50,8 @@ for (let seat of seats) {
         else {
             nextBtn.disabled = true;
         }
+
+        e.target.disabled = true;
 
         
 
@@ -124,6 +126,7 @@ document.getElementById('phoneNo').addEventListener('keyup', function(e) {
 
 
 document.getElementById('form-submit').addEventListener('submit', function(e) {
+
 
     e.preventDefault();
 })
