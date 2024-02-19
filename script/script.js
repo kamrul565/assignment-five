@@ -1,8 +1,17 @@
 
 let booked = 0;
 let costs = 0;
+let nextBtn = document.getElementById('next-btn');
 
 const seats = document.querySelectorAll('#seats');
+let p = document.getElementById('phoneNo');
+let e = document.getElementById('email-id');
+let u = document.getElementById('UserName');
+
+u.value = '';
+e.value = '';
+p.value = '';
+
 
 for (let seat of seats) {
 
@@ -24,6 +33,8 @@ for (let seat of seats) {
             let apply = document.getElementById('apply');
             apply.disabled = true;
         }
+
+        
 
         //background change
         let tar = e.target;
@@ -79,8 +90,22 @@ document.getElementById('apply').addEventListener('click', function(e) {
     
 })
 
+document.getElementById('phoneNo').addEventListener('keyup', function(e) {
+    let phone = e.target.value;
+    if(phone != '' && booked > 0) {
+        nextBtn.disabled = false;
+    }
+    else {
+        nextBtn.disabled = true;
+    }
 
-document.getElementById('form').addEventListener('submit', function(e) {
+    
+})
+
+
+document.getElementById('form-submit').addEventListener('submit', function(e) {
+   // p.target.value = '';
+    //console.log(p.value);
     e.preventDefault();
 })
 
@@ -126,6 +151,6 @@ function addSeats(seatNo) {
 let apply = document.getElementById('apply');
 apply.disabled = true;
 
-let nextBtn = document.getElementById('next-btn');
+
 nextBtn.disabled = true;
 
